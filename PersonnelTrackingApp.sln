@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32901.82
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonnelTrackingApp", "PersonnelTrackingApp\PersonnelTrackingApp.csproj", "{B6DCF95D-3ADC-4F53-B269-BFF3405E44D7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL", "BLL\BLL.csproj", "{63A11F2D-82EA-4FFA-8D69-F9510421CD5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL", "DAL\DAL.csproj", "{AA8AAD44-8D94-454D-BB07-FEA166EAC833}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B6DCF95D-3ADC-4F53-B269-BFF3405E44D7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6DCF95D-3ADC-4F53-B269-BFF3405E44D7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6DCF95D-3ADC-4F53-B269-BFF3405E44D7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6DCF95D-3ADC-4F53-B269-BFF3405E44D7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63A11F2D-82EA-4FFA-8D69-F9510421CD5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63A11F2D-82EA-4FFA-8D69-F9510421CD5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63A11F2D-82EA-4FFA-8D69-F9510421CD5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63A11F2D-82EA-4FFA-8D69-F9510421CD5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA8AAD44-8D94-454D-BB07-FEA166EAC833}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA8AAD44-8D94-454D-BB07-FEA166EAC833}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA8AAD44-8D94-454D-BB07-FEA166EAC833}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA8AAD44-8D94-454D-BB07-FEA166EAC833}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F91E936F-A8CA-4551-A4A8-B30CAF39C76D}
+	EndGlobalSection
+EndGlobal
