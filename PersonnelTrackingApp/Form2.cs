@@ -82,7 +82,7 @@ namespace PersonnelTrackingApp
         private void button3_Click_1(object sender, EventArgs e)
         {
             this.Hide();
-            FormDepartment FrmDept = new FormDepartment();
+            FormDepartmentList FrmDept = new FormDepartmentList();
             FrmDept.ShowDialog();
             this.Visible = true;
         }

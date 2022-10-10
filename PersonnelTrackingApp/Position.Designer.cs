@@ -33,8 +33,8 @@ namespace PersonnelTrackingApp
             this.label1 = new System.Windows.Forms.Label();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
-            this.txtPosDept = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // txtPos
@@ -63,6 +63,7 @@ namespace PersonnelTrackingApp
             this.btnCancel.TabIndex = 3;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // btnSave
             // 
@@ -73,13 +74,7 @@ namespace PersonnelTrackingApp
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
-            // 
-            // txtPosDept
-            // 
-            this.txtPosDept.Location = new System.Drawing.Point(116, 49);
-            this.txtPosDept.Name = "txtPosDept";
-            this.txtPosDept.Size = new System.Drawing.Size(100, 20);
-            this.txtPosDept.TabIndex = 1;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // label2
             // 
@@ -91,19 +86,31 @@ namespace PersonnelTrackingApp
             this.label2.TabIndex = 8;
             this.label2.Text = "Department";
             // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(116, 51);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(100, 21);
+            this.cmbDepartment.TabIndex = 9;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // Position
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(236, 177);
-            this.Controls.Add(this.txtPosDept);
+            this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.btnSave);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "Position";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Position";
+            this.Load += new System.EventHandler(this.Position_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -115,7 +122,7 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnCancel;
         private System.Windows.Forms.Button btnSave;
-        private System.Windows.Forms.TextBox txtPosDept;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cmbDepartment;
     }
 }

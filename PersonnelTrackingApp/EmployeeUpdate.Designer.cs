@@ -30,20 +30,18 @@ namespace PersonnelTrackingApp
         private void InitializeComponent()
         {
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.cbNewAdmin = new System.Windows.Forms.CheckBox();
+            this.chisAdmin = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.btnNewCheck = new System.Windows.Forms.Button();
             this.btnNewBrowse = new System.Windows.Forms.Button();
-            this.txtNewAdd = new System.Windows.Forms.TextBox();
-            this.txtNewSalary = new System.Windows.Forms.TextBox();
-            this.txtNewImage = new System.Windows.Forms.TextBox();
-            this.txtNewPosition = new System.Windows.Forms.TextBox();
-            this.txtNewSurname = new System.Windows.Forms.TextBox();
-            this.txtNewDept = new System.Windows.Forms.TextBox();
-            this.txtNewName = new System.Windows.Forms.TextBox();
-            this.txtNewPass = new System.Windows.Forms.TextBox();
-            this.txtNewUser = new System.Windows.Forms.TextBox();
+            this.txtAddress = new System.Windows.Forms.TextBox();
+            this.txtSalary = new System.Windows.Forms.TextBox();
+            this.txtImagePath = new System.Windows.Forms.TextBox();
+            this.txtSurname = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.txtPassword = new System.Windows.Forms.TextBox();
+            this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -55,6 +53,9 @@ namespace PersonnelTrackingApp
             this.label10 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.cmbDepartment = new System.Windows.Forms.ComboBox();
+            this.cmbPosition = new System.Windows.Forms.ComboBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -65,16 +66,17 @@ namespace PersonnelTrackingApp
             this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
             this.dateTimePicker2.TabIndex = 30;
             // 
-            // cbNewAdmin
+            // chisAdmin
             // 
-            this.cbNewAdmin.AutoSize = true;
-            this.cbNewAdmin.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbNewAdmin.Location = new System.Drawing.Point(540, 17);
-            this.cbNewAdmin.Name = "cbNewAdmin";
-            this.cbNewAdmin.Size = new System.Drawing.Size(94, 24);
-            this.cbNewAdmin.TabIndex = 29;
-            this.cbNewAdmin.Text = "is admin?";
-            this.cbNewAdmin.UseVisualStyleBackColor = true;
+            this.chisAdmin.AutoSize = true;
+            this.chisAdmin.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.chisAdmin.Location = new System.Drawing.Point(540, 17);
+            this.chisAdmin.Name = "chisAdmin";
+            this.chisAdmin.Size = new System.Drawing.Size(94, 24);
+            this.chisAdmin.TabIndex = 29;
+            this.chisAdmin.Text = "is admin?";
+            this.chisAdmin.UseVisualStyleBackColor = true;
+            this.chisAdmin.CheckedChanged += new System.EventHandler(this.cbNewAdmin_CheckedChanged);
             // 
             // button2
             // 
@@ -85,6 +87,7 @@ namespace PersonnelTrackingApp
             this.button2.TabIndex = 28;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -95,6 +98,7 @@ namespace PersonnelTrackingApp
             this.button1.TabIndex = 27;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnNewCheck
             // 
@@ -115,70 +119,57 @@ namespace PersonnelTrackingApp
             this.btnNewBrowse.TabIndex = 25;
             this.btnNewBrowse.Text = "Browse";
             this.btnNewBrowse.UseVisualStyleBackColor = true;
+            this.btnNewBrowse.Click += new System.EventHandler(this.btnNewBrowse_Click);
             // 
-            // txtNewAdd
+            // txtAddress
             // 
-            this.txtNewAdd.Location = new System.Drawing.Point(130, 332);
-            this.txtNewAdd.Multiline = true;
-            this.txtNewAdd.Name = "txtNewAdd";
-            this.txtNewAdd.Size = new System.Drawing.Size(487, 34);
-            this.txtNewAdd.TabIndex = 23;
+            this.txtAddress.Location = new System.Drawing.Point(130, 332);
+            this.txtAddress.Multiline = true;
+            this.txtAddress.Name = "txtAddress";
+            this.txtAddress.Size = new System.Drawing.Size(487, 34);
+            this.txtAddress.TabIndex = 23;
             // 
-            // txtNewSalary
+            // txtSalary
             // 
-            this.txtNewSalary.Location = new System.Drawing.Point(130, 205);
-            this.txtNewSalary.Name = "txtNewSalary";
-            this.txtNewSalary.Size = new System.Drawing.Size(100, 20);
-            this.txtNewSalary.TabIndex = 22;
+            this.txtSalary.Location = new System.Drawing.Point(130, 205);
+            this.txtSalary.Name = "txtSalary";
+            this.txtSalary.Size = new System.Drawing.Size(100, 20);
+            this.txtSalary.TabIndex = 22;
             // 
-            // txtNewImage
+            // txtImagePath
             // 
-            this.txtNewImage.Location = new System.Drawing.Point(130, 175);
-            this.txtNewImage.Name = "txtNewImage";
-            this.txtNewImage.Size = new System.Drawing.Size(100, 20);
-            this.txtNewImage.TabIndex = 21;
+            this.txtImagePath.Location = new System.Drawing.Point(130, 175);
+            this.txtImagePath.Name = "txtImagePath";
+            this.txtImagePath.Size = new System.Drawing.Size(100, 20);
+            this.txtImagePath.TabIndex = 21;
             // 
-            // txtNewPosition
+            // txtSurname
             // 
-            this.txtNewPosition.Location = new System.Drawing.Point(130, 265);
-            this.txtNewPosition.Name = "txtNewPosition";
-            this.txtNewPosition.Size = new System.Drawing.Size(100, 20);
-            this.txtNewPosition.TabIndex = 20;
+            this.txtSurname.Location = new System.Drawing.Point(130, 147);
+            this.txtSurname.Name = "txtSurname";
+            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.TabIndex = 19;
             // 
-            // txtNewSurname
+            // txtName
             // 
-            this.txtNewSurname.Location = new System.Drawing.Point(130, 147);
-            this.txtNewSurname.Name = "txtNewSurname";
-            this.txtNewSurname.Size = new System.Drawing.Size(100, 20);
-            this.txtNewSurname.TabIndex = 19;
+            this.txtName.Location = new System.Drawing.Point(130, 117);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.TabIndex = 18;
             // 
-            // txtNewDept
+            // txtPassword
             // 
-            this.txtNewDept.Location = new System.Drawing.Point(130, 235);
-            this.txtNewDept.Name = "txtNewDept";
-            this.txtNewDept.Size = new System.Drawing.Size(100, 20);
-            this.txtNewDept.TabIndex = 24;
+            this.txtPassword.Location = new System.Drawing.Point(406, 18);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(112, 20);
+            this.txtPassword.TabIndex = 17;
             // 
-            // txtNewName
+            // txtUserNo
             // 
-            this.txtNewName.Location = new System.Drawing.Point(130, 117);
-            this.txtNewName.Name = "txtNewName";
-            this.txtNewName.Size = new System.Drawing.Size(100, 20);
-            this.txtNewName.TabIndex = 18;
-            // 
-            // txtNewPass
-            // 
-            this.txtNewPass.Location = new System.Drawing.Point(406, 18);
-            this.txtNewPass.Name = "txtNewPass";
-            this.txtNewPass.Size = new System.Drawing.Size(112, 20);
-            this.txtNewPass.TabIndex = 17;
-            // 
-            // txtNewUser
-            // 
-            this.txtNewUser.Location = new System.Drawing.Point(101, 18);
-            this.txtNewUser.Name = "txtNewUser";
-            this.txtNewUser.Size = new System.Drawing.Size(112, 20);
-            this.txtNewUser.TabIndex = 16;
+            this.txtUserNo.Location = new System.Drawing.Point(101, 18);
+            this.txtUserNo.Name = "txtUserNo";
+            this.txtUserNo.Size = new System.Drawing.Size(112, 20);
+            this.txtUserNo.TabIndex = 16;
             // 
             // label9
             // 
@@ -288,27 +279,48 @@ namespace PersonnelTrackingApp
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
+            // cmbDepartment
+            // 
+            this.cmbDepartment.FormattingEnabled = true;
+            this.cmbDepartment.Location = new System.Drawing.Point(130, 233);
+            this.cmbDepartment.Name = "cmbDepartment";
+            this.cmbDepartment.Size = new System.Drawing.Size(100, 21);
+            this.cmbDepartment.TabIndex = 32;
+            this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
+            // 
+            // cmbPosition
+            // 
+            this.cmbPosition.FormattingEnabled = true;
+            this.cmbPosition.Location = new System.Drawing.Point(130, 261);
+            this.cmbPosition.Name = "cmbPosition";
+            this.cmbPosition.Size = new System.Drawing.Size(100, 21);
+            this.cmbPosition.TabIndex = 33;
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // EmployeeUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 432);
+            this.Controls.Add(this.cmbPosition);
+            this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.cbNewAdmin);
+            this.Controls.Add(this.chisAdmin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnNewCheck);
             this.Controls.Add(this.btnNewBrowse);
-            this.Controls.Add(this.txtNewAdd);
-            this.Controls.Add(this.txtNewSalary);
-            this.Controls.Add(this.txtNewImage);
-            this.Controls.Add(this.txtNewPosition);
-            this.Controls.Add(this.txtNewSurname);
-            this.Controls.Add(this.txtNewDept);
-            this.Controls.Add(this.txtNewName);
-            this.Controls.Add(this.txtNewPass);
-            this.Controls.Add(this.txtNewUser);
+            this.Controls.Add(this.txtAddress);
+            this.Controls.Add(this.txtSalary);
+            this.Controls.Add(this.txtImagePath);
+            this.Controls.Add(this.txtSurname);
+            this.Controls.Add(this.txtName);
+            this.Controls.Add(this.txtPassword);
+            this.Controls.Add(this.txtUserNo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
@@ -323,6 +335,7 @@ namespace PersonnelTrackingApp
             this.Name = "EmployeeUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Update";
+            this.Load += new System.EventHandler(this.EmployeeUpdate_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -332,20 +345,18 @@ namespace PersonnelTrackingApp
         #endregion
 
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.CheckBox cbNewAdmin;
+        private System.Windows.Forms.CheckBox chisAdmin;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnNewCheck;
         private System.Windows.Forms.Button btnNewBrowse;
-        private System.Windows.Forms.TextBox txtNewAdd;
-        private System.Windows.Forms.TextBox txtNewSalary;
-        private System.Windows.Forms.TextBox txtNewImage;
-        private System.Windows.Forms.TextBox txtNewPosition;
-        private System.Windows.Forms.TextBox txtNewSurname;
-        private System.Windows.Forms.TextBox txtNewDept;
-        private System.Windows.Forms.TextBox txtNewName;
-        private System.Windows.Forms.TextBox txtNewPass;
-        private System.Windows.Forms.TextBox txtNewUser;
+        private System.Windows.Forms.TextBox txtAddress;
+        private System.Windows.Forms.TextBox txtSalary;
+        private System.Windows.Forms.TextBox txtImagePath;
+        private System.Windows.Forms.TextBox txtSurname;
+        private System.Windows.Forms.TextBox txtName;
+        private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
@@ -357,5 +368,8 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.ComboBox cmbDepartment;
+        private System.Windows.Forms.ComboBox cmbPosition;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

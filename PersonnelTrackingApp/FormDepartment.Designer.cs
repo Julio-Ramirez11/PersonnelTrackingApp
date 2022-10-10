@@ -32,7 +32,7 @@ namespace PersonnelTrackingApp
             this.btnSave = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtDept = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnSave
@@ -44,6 +44,7 @@ namespace PersonnelTrackingApp
             this.btnSave.TabIndex = 1;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // button1
             // 
@@ -54,6 +55,7 @@ namespace PersonnelTrackingApp
             this.button1.TabIndex = 2;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // label1
             // 
@@ -65,24 +67,25 @@ namespace PersonnelTrackingApp
             this.label1.TabIndex = 2;
             this.label1.Text = "Department";
             // 
-            // textBox1
+            // txtDept
             // 
-            this.textBox1.Location = new System.Drawing.Point(112, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 0;
+            this.txtDept.Location = new System.Drawing.Point(112, 36);
+            this.txtDept.Name = "txtDept";
+            this.txtDept.Size = new System.Drawing.Size(100, 20);
+            this.txtDept.TabIndex = 0;
             // 
             // FormDepartment
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(236, 177);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtDept);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSave);
             this.Name = "FormDepartment";
             this.Text = "FormDepartment";
+            this.Load += new System.EventHandler(this.FormDepartment_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -93,6 +96,6 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtDept;
     }
 }
