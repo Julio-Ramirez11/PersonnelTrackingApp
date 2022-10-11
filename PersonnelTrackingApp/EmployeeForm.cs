@@ -127,11 +127,11 @@ namespace PersonnelTrackingApp
         private void btnSearch_Click(object sender, EventArgs e)
         {
             List<EmployeeDetailDTO> list = dto.Employees;
-            if (txtEmpUserNo.Text.Trim() == "")
+            if (txtEmpUserNo.Text.Trim() != "")
                 list = list.Where(x => x.UserNo == Convert.ToInt32(txtEmpUserNo.Text)).ToList();
-            if (txtEmpName.Text.Trim() == "")
-                list = list.Where(x => x.Name.Contains(txtEmpUserNo.Text)).ToList();
-            if (txtEmpSurname.Text.Trim() == "")
+            if (txtEmpName.Text.Trim() != "")
+                list = list.Where(x => x.Name.Contains(txtEmpName.Text)).ToList();
+            if (txtEmpSurname.Text.Trim() != "")
                 list = list.Where(x => x.Surname.Contains(txtEmpSurname.Text)).ToList();
             if (cmbDept.SelectedIndex != -1)
                 list = list.Where(x => x.DepartmentID == Convert.ToInt32(cmbDept.SelectedValue)).ToList();
