@@ -40,7 +40,6 @@ namespace PersonnelTrackingApp
             this.txtImagePath = new System.Windows.Forms.TextBox();
             this.txtSurname = new System.Windows.Forms.TextBox();
             this.txtName = new System.Windows.Forms.TextBox();
-            this.txtPassword = new System.Windows.Forms.TextBox();
             this.txtUserNo = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -56,6 +55,7 @@ namespace PersonnelTrackingApp
             this.cmbDepartment = new System.Windows.Forms.ComboBox();
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.txtPassword = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +109,7 @@ namespace PersonnelTrackingApp
             this.btnNewCheck.TabIndex = 26;
             this.btnNewCheck.Text = "Check";
             this.btnNewCheck.UseVisualStyleBackColor = true;
+            this.btnNewCheck.Click += new System.EventHandler(this.btnNewCheck_Click);
             // 
             // btnNewBrowse
             // 
@@ -156,13 +157,6 @@ namespace PersonnelTrackingApp
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(100, 20);
             this.txtName.TabIndex = 18;
-            // 
-            // txtPassword
-            // 
-            this.txtPassword.Location = new System.Drawing.Point(406, 18);
-            this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(112, 20);
-            this.txtPassword.TabIndex = 17;
             // 
             // txtUserNo
             // 
@@ -300,11 +294,19 @@ namespace PersonnelTrackingApp
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // txtPassword
+            // 
+            this.txtPassword.Location = new System.Drawing.Point(406, 19);
+            this.txtPassword.Name = "txtPassword";
+            this.txtPassword.Size = new System.Drawing.Size(112, 20);
+            this.txtPassword.TabIndex = 34;
+            // 
             // EmployeeUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(651, 432);
+            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.cmbPosition);
             this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.pictureBox1);
@@ -319,7 +321,6 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.txtImagePath);
             this.Controls.Add(this.txtSurname);
             this.Controls.Add(this.txtName);
-            this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserNo);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
@@ -355,7 +356,6 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.TextBox txtImagePath;
         private System.Windows.Forms.TextBox txtSurname;
         private System.Windows.Forms.TextBox txtName;
-        private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.TextBox txtUserNo;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label8;
@@ -371,5 +371,6 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.ComboBox cmbDepartment;
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox txtPassword;
     }
 }

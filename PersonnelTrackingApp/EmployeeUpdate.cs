@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using BLL;
 using DAL;
 using DAL.DTO;
+using System.IO;
 
 namespace PersonnelTrackingApp
 {
@@ -65,6 +66,8 @@ namespace PersonnelTrackingApp
         {
             if (txtName.Text.Trim() == "")
                 MessageBox.Show("User no is Empty");
+            else if (!EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text)))
+                MessageBox.Show("This user no. is used by another employee please change");
             else if (txtPassword.Text.Trim() == "")
                 MessageBox.Show("Password is Empty");
             else if (txtName.Text.Trim() == "")
@@ -81,23 +84,57 @@ namespace PersonnelTrackingApp
             {
                 DAL.Employee employee = new DAL.Employee();
                 employee.UserNo = Convert.ToInt32(txtUserNo.Text);
-                //employee.Password = txtPassword.Text;
+                employee.Password = txtPassword.Text;
                 employee.isAdmin = chisAdmin.Checked;
                 employee.Name = txtName.Text;
                 employee.Surname = txtSurname.Text;
                 employee.Salary = Convert.ToInt32(txtSalary.Text);
                 employee.DepartmentID = Convert.ToInt32(cmbDepartment.SelectedValue);
                 employee.PositionID = Convert.ToInt32(cmbPosition.SelectedValue);
-                employee.Adress = txtAddress.Text;
-                employee.Birthday = dateTimePicker2.Value;
+                employee.Address = txtAddress.Text;
+                employee.BirthDay = dateTimePicker2.Value;
                 employee.ImagePath = fileName;
                 EmployeeBLL.AddEmployee(employee);
+                File.Copy(txtImagePath.Text, @"images\\" + fileName);
+                MessageBox.Show("Employee was added");
+                txtUserNo.Clear();
+                txtPassword.Clear();
+                chisAdmin.Checked = false;
+                txtName.Clear();
+                txtSurname.Clear();
+                txtSalary.Clear();
+                txtAddress.Clear();
+                txtImagePath.Clear();
+                pictureBox1.Image = null;
+                combofull = false;
+                cmbDepartment.SelectedIndex = -1;
+                cmbPosition.DataSource = dto.Positions;
+                cmbPosition.SelectedIndex = -1;
+                combofull = true;
+                dateTimePicker2.Value = DateTime.Today; 
+
             }
         }
 
         private void cbNewAdmin_CheckedChanged(object sender, EventArgs e)
         {
 
+        }
+        bool isUnique = false;
+        private void btnNewCheck_Click(object sender, EventArgs e)
+        {
+            if (txtUserNo.Text.Trim() == "")
+            {
+                MessageBox.Show("User No. is Empty");
+            }
+            else
+            {
+                isUnique = EmployeeBLL.isUnique(Convert.ToInt32(txtUserNo.Text));
+                if (!isUnique)
+                    MessageBox.Show("This user no. is used by another employee please change");
+                else
+                    MessageBox.Show("This user no. is usuable");
+            }
         }
     }
 }
