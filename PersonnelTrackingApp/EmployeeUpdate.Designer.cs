@@ -61,18 +61,20 @@ namespace PersonnelTrackingApp
             // 
             // dateTimePicker2
             // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(130, 297);
+            this.dateTimePicker2.Location = new System.Drawing.Point(195, 457);
+            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(100, 20);
+            this.dateTimePicker2.Size = new System.Drawing.Size(148, 26);
             this.dateTimePicker2.TabIndex = 30;
             // 
             // chisAdmin
             // 
             this.chisAdmin.AutoSize = true;
             this.chisAdmin.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chisAdmin.Location = new System.Drawing.Point(540, 17);
+            this.chisAdmin.Location = new System.Drawing.Point(810, 26);
+            this.chisAdmin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.chisAdmin.Name = "chisAdmin";
-            this.chisAdmin.Size = new System.Drawing.Size(94, 24);
+            this.chisAdmin.Size = new System.Drawing.Size(141, 35);
             this.chisAdmin.TabIndex = 29;
             this.chisAdmin.Text = "is admin?";
             this.chisAdmin.UseVisualStyleBackColor = true;
@@ -81,9 +83,10 @@ namespace PersonnelTrackingApp
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(300, 382);
+            this.button2.Location = new System.Drawing.Point(450, 588);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(77, 37);
+            this.button2.Size = new System.Drawing.Size(116, 57);
             this.button2.TabIndex = 28;
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
@@ -92,9 +95,10 @@ namespace PersonnelTrackingApp
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(198, 382);
+            this.button1.Location = new System.Drawing.Point(297, 588);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(77, 37);
+            this.button1.Size = new System.Drawing.Size(116, 57);
             this.button1.TabIndex = 27;
             this.button1.Text = "Save";
             this.button1.UseVisualStyleBackColor = true;
@@ -103,9 +107,10 @@ namespace PersonnelTrackingApp
             // btnNewCheck
             // 
             this.btnNewCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewCheck.Location = new System.Drawing.Point(219, 14);
+            this.btnNewCheck.Location = new System.Drawing.Point(328, 22);
+            this.btnNewCheck.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNewCheck.Name = "btnNewCheck";
-            this.btnNewCheck.Size = new System.Drawing.Size(73, 27);
+            this.btnNewCheck.Size = new System.Drawing.Size(110, 42);
             this.btnNewCheck.TabIndex = 26;
             this.btnNewCheck.Text = "Check";
             this.btnNewCheck.UseVisualStyleBackColor = true;
@@ -114,9 +119,10 @@ namespace PersonnelTrackingApp
             // btnNewBrowse
             // 
             this.btnNewBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewBrowse.Location = new System.Drawing.Point(236, 171);
+            this.btnNewBrowse.Location = new System.Drawing.Point(351, 259);
+            this.btnNewBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnNewBrowse.Name = "btnNewBrowse";
-            this.btnNewBrowse.Size = new System.Drawing.Size(73, 27);
+            this.btnNewBrowse.Size = new System.Drawing.Size(110, 42);
             this.btnNewBrowse.TabIndex = 25;
             this.btnNewBrowse.Text = "Browse";
             this.btnNewBrowse.UseVisualStyleBackColor = true;
@@ -124,54 +130,61 @@ namespace PersonnelTrackingApp
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(130, 332);
+            this.txtAddress.Location = new System.Drawing.Point(195, 511);
+            this.txtAddress.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(487, 34);
+            this.txtAddress.Size = new System.Drawing.Size(728, 50);
             this.txtAddress.TabIndex = 23;
             // 
             // txtSalary
             // 
-            this.txtSalary.Location = new System.Drawing.Point(130, 205);
+            this.txtSalary.Location = new System.Drawing.Point(195, 315);
+            this.txtSalary.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSalary.Name = "txtSalary";
-            this.txtSalary.Size = new System.Drawing.Size(100, 20);
+            this.txtSalary.Size = new System.Drawing.Size(148, 26);
             this.txtSalary.TabIndex = 22;
             // 
             // txtImagePath
             // 
-            this.txtImagePath.Location = new System.Drawing.Point(130, 175);
+            this.txtImagePath.Location = new System.Drawing.Point(195, 269);
+            this.txtImagePath.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtImagePath.Name = "txtImagePath";
-            this.txtImagePath.Size = new System.Drawing.Size(100, 20);
+            this.txtImagePath.Size = new System.Drawing.Size(148, 26);
             this.txtImagePath.TabIndex = 21;
             // 
             // txtSurname
             // 
-            this.txtSurname.Location = new System.Drawing.Point(130, 147);
+            this.txtSurname.Location = new System.Drawing.Point(195, 226);
+            this.txtSurname.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtSurname.Name = "txtSurname";
-            this.txtSurname.Size = new System.Drawing.Size(100, 20);
+            this.txtSurname.Size = new System.Drawing.Size(148, 26);
             this.txtSurname.TabIndex = 19;
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(130, 117);
+            this.txtName.Location = new System.Drawing.Point(195, 180);
+            this.txtName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(100, 20);
+            this.txtName.Size = new System.Drawing.Size(148, 26);
             this.txtName.TabIndex = 18;
             // 
             // txtUserNo
             // 
-            this.txtUserNo.Location = new System.Drawing.Point(101, 18);
+            this.txtUserNo.Location = new System.Drawing.Point(152, 28);
+            this.txtUserNo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtUserNo.Name = "txtUserNo";
-            this.txtUserNo.Size = new System.Drawing.Size(112, 20);
+            this.txtUserNo.Size = new System.Drawing.Size(166, 26);
             this.txtUserNo.TabIndex = 16;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(18, 330);
+            this.label9.Location = new System.Drawing.Point(27, 508);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(78, 20);
+            this.label9.Size = new System.Drawing.Size(115, 30);
             this.label9.TabIndex = 14;
             this.label9.Text = "Address : ";
             // 
@@ -179,9 +192,10 @@ namespace PersonnelTrackingApp
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(18, 297);
+            this.label8.Location = new System.Drawing.Point(27, 457);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 20);
+            this.label8.Size = new System.Drawing.Size(115, 30);
             this.label8.TabIndex = 13;
             this.label8.Text = "Birthday :";
             // 
@@ -189,9 +203,10 @@ namespace PersonnelTrackingApp
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(18, 262);
+            this.label7.Location = new System.Drawing.Point(27, 403);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(77, 20);
+            this.label7.Size = new System.Drawing.Size(114, 30);
             this.label7.TabIndex = 12;
             this.label7.Text = "Position : ";
             // 
@@ -199,9 +214,10 @@ namespace PersonnelTrackingApp
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(18, 233);
+            this.label6.Location = new System.Drawing.Point(27, 358);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(106, 20);
+            this.label6.Size = new System.Drawing.Size(158, 30);
             this.label6.TabIndex = 11;
             this.label6.Text = "Department : ";
             // 
@@ -209,9 +225,10 @@ namespace PersonnelTrackingApp
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(18, 203);
+            this.label5.Location = new System.Drawing.Point(27, 312);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(64, 20);
+            this.label5.Size = new System.Drawing.Size(95, 30);
             this.label5.TabIndex = 10;
             this.label5.Text = "Salary : ";
             // 
@@ -219,9 +236,10 @@ namespace PersonnelTrackingApp
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 174);
+            this.label4.Location = new System.Drawing.Point(27, 268);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 20);
+            this.label4.Size = new System.Drawing.Size(149, 30);
             this.label4.TabIndex = 9;
             this.label4.Text = "Image Path : ";
             // 
@@ -229,9 +247,10 @@ namespace PersonnelTrackingApp
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(18, 145);
+            this.label3.Location = new System.Drawing.Point(27, 223);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(79, 20);
+            this.label3.Size = new System.Drawing.Size(116, 30);
             this.label3.TabIndex = 8;
             this.label3.Text = "Surname :";
             // 
@@ -239,9 +258,10 @@ namespace PersonnelTrackingApp
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(18, 115);
+            this.label2.Location = new System.Drawing.Point(27, 177);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 20);
+            this.label2.Size = new System.Drawing.Size(86, 30);
             this.label2.TabIndex = 7;
             this.label2.Text = "Name :";
             // 
@@ -249,9 +269,10 @@ namespace PersonnelTrackingApp
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(324, 18);
+            this.label10.Location = new System.Drawing.Point(486, 28);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(76, 20);
+            this.label10.Size = new System.Drawing.Size(112, 30);
             this.label10.TabIndex = 15;
             this.label10.Text = "Password";
             // 
@@ -259,35 +280,39 @@ namespace PersonnelTrackingApp
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Nirmala UI", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(17, 18);
+            this.label1.Location = new System.Drawing.Point(26, 28);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(78, 20);
+            this.label1.Size = new System.Drawing.Size(114, 30);
             this.label1.TabIndex = 6;
             this.label1.Text = "User No. :";
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(406, 111);
+            this.pictureBox1.Location = new System.Drawing.Point(609, 171);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(169, 144);
+            this.pictureBox1.Size = new System.Drawing.Size(254, 222);
             this.pictureBox1.TabIndex = 31;
             this.pictureBox1.TabStop = false;
             // 
             // cmbDepartment
             // 
             this.cmbDepartment.FormattingEnabled = true;
-            this.cmbDepartment.Location = new System.Drawing.Point(130, 233);
+            this.cmbDepartment.Location = new System.Drawing.Point(195, 358);
+            this.cmbDepartment.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbDepartment.Name = "cmbDepartment";
-            this.cmbDepartment.Size = new System.Drawing.Size(100, 21);
+            this.cmbDepartment.Size = new System.Drawing.Size(148, 28);
             this.cmbDepartment.TabIndex = 32;
             this.cmbDepartment.SelectedIndexChanged += new System.EventHandler(this.cmbDepartment_SelectedIndexChanged);
             // 
             // cmbPosition
             // 
             this.cmbPosition.FormattingEnabled = true;
-            this.cmbPosition.Location = new System.Drawing.Point(130, 261);
+            this.cmbPosition.Location = new System.Drawing.Point(195, 402);
+            this.cmbPosition.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.cmbPosition.Name = "cmbPosition";
-            this.cmbPosition.Size = new System.Drawing.Size(100, 21);
+            this.cmbPosition.Size = new System.Drawing.Size(148, 28);
             this.cmbPosition.TabIndex = 33;
             // 
             // openFileDialog1
@@ -296,16 +321,17 @@ namespace PersonnelTrackingApp
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(406, 19);
+            this.txtPassword.Location = new System.Drawing.Point(609, 29);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(112, 20);
+            this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 34;
             // 
             // EmployeeUpdate
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(651, 432);
+            this.ClientSize = new System.Drawing.Size(976, 665);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.cmbPosition);
             this.Controls.Add(this.cmbDepartment);
@@ -333,6 +359,7 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "EmployeeUpdate";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Update";

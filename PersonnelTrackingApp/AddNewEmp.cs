@@ -36,5 +36,10 @@ namespace PersonnelTrackingApp
         {
 
         }
+
+        private void btnNewCheck_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

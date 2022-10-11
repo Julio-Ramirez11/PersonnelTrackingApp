@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="EmployeeDataClass">
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.875" name="EmployeeDataClass">
   <DataContextMoniker Name="/EmployeeDataClassDataContext" />
   <nestedChildShapes>
     <classShape Id="3c87e421-29e1-4d47-b057-b859034de252" absoluteBounds="3.75, 0.75, 2, 1.1939925130208335">
@@ -48,6 +48,12 @@
       <DataClassMoniker Name="/EmployeeDataClassDataContext/Employee" />
       <nestedChildShapes>
         <elementListCompartment Id="7a993bc3-65fc-4a9c-bb94-9a6b71da09db" absoluteBounds="0.76500000000000012, 3.21, 1.9700000000000002, 2.5570068359375" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="52632d66-70e8-4db5-86b7-e0198869a6b0" absoluteBounds="1, 6.5, 2, 2.1554996744791666">
+      <DataClassMoniker Name="/EmployeeDataClassDataContext/Task" />
+      <nestedChildShapes>
+        <elementListCompartment Id="5678219e-859c-45d9-a6d3-2e42f52ce9cd" absoluteBounds="1.0150000000000001, 6.96, 1.9700000000000002, 1.5954996744791665" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>
