@@ -42,9 +42,10 @@ namespace PersonnelTrackingApp
             // 
             // btnTrackEmp
             // 
-            this.btnTrackEmp.Location = new System.Drawing.Point(45, 181);
+            this.btnTrackEmp.Location = new System.Drawing.Point(23, 58);
+            this.btnTrackEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTrackEmp.Name = "btnTrackEmp";
-            this.btnTrackEmp.Size = new System.Drawing.Size(132, 71);
+            this.btnTrackEmp.Size = new System.Drawing.Size(198, 109);
             this.btnTrackEmp.TabIndex = 0;
             this.btnTrackEmp.Text = "Employee";
             this.btnTrackEmp.UseVisualStyleBackColor = true;
@@ -52,9 +53,10 @@ namespace PersonnelTrackingApp
             // 
             // btnLogout
             // 
-            this.btnLogout.Location = new System.Drawing.Point(447, 368);
+            this.btnLogout.Location = new System.Drawing.Point(349, 327);
+            this.btnLogout.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnLogout.Name = "btnLogout";
-            this.btnLogout.Size = new System.Drawing.Size(93, 39);
+            this.btnLogout.Size = new System.Drawing.Size(140, 60);
             this.btnLogout.TabIndex = 1;
             this.btnLogout.Text = "Logout";
             this.btnLogout.UseVisualStyleBackColor = true;
@@ -62,9 +64,10 @@ namespace PersonnelTrackingApp
             // 
             // btnExit
             // 
-            this.btnExit.Location = new System.Drawing.Point(546, 368);
+            this.btnExit.Location = new System.Drawing.Point(498, 327);
+            this.btnExit.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(93, 39);
+            this.btnExit.Size = new System.Drawing.Size(140, 60);
             this.btnExit.TabIndex = 2;
             this.btnExit.Text = "Exit";
             this.btnExit.UseVisualStyleBackColor = true;
@@ -72,9 +75,10 @@ namespace PersonnelTrackingApp
             // 
             // btnTasks
             // 
-            this.btnTasks.Location = new System.Drawing.Point(183, 181);
+            this.btnTasks.Location = new System.Drawing.Point(229, 58);
+            this.btnTasks.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnTasks.Name = "btnTasks";
-            this.btnTasks.Size = new System.Drawing.Size(132, 71);
+            this.btnTasks.Size = new System.Drawing.Size(198, 109);
             this.btnTasks.TabIndex = 3;
             this.btnTasks.Text = "Tasks";
             this.btnTasks.UseVisualStyleBackColor = true;
@@ -82,9 +86,10 @@ namespace PersonnelTrackingApp
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(321, 181);
+            this.button1.Location = new System.Drawing.Point(437, 58);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(132, 71);
+            this.button1.Size = new System.Drawing.Size(198, 109);
             this.button1.TabIndex = 4;
             this.button1.Text = "Salary";
             this.button1.UseVisualStyleBackColor = true;
@@ -92,9 +97,10 @@ namespace PersonnelTrackingApp
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(45, 258);
+            this.button2.Location = new System.Drawing.Point(23, 177);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(132, 71);
+            this.button2.Size = new System.Drawing.Size(198, 109);
             this.button2.TabIndex = 5;
             this.button2.Text = "Permission";
             this.button2.UseVisualStyleBackColor = true;
@@ -102,9 +108,10 @@ namespace PersonnelTrackingApp
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(183, 258);
+            this.button3.Location = new System.Drawing.Point(229, 177);
+            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(132, 71);
+            this.button3.Size = new System.Drawing.Size(198, 109);
             this.button3.TabIndex = 6;
             this.button3.Text = "Department";
             this.button3.UseVisualStyleBackColor = true;
@@ -112,9 +119,10 @@ namespace PersonnelTrackingApp
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(321, 258);
+            this.button4.Location = new System.Drawing.Point(437, 177);
+            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(132, 71);
+            this.button4.Size = new System.Drawing.Size(198, 109);
             this.button4.TabIndex = 7;
             this.button4.Text = "Position";
             this.button4.UseVisualStyleBackColor = true;
@@ -122,7 +130,7 @@ namespace PersonnelTrackingApp
             // 
             // FormTracking
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
@@ -136,6 +144,7 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.btnLogout);
             this.Controls.Add(this.btnTrackEmp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormTracking";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee Tracking";

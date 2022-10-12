@@ -19,7 +19,22 @@ namespace PersonnelTrackingApp
             InitializeComponent();
         }
 
-        private void btnSave_Click(object sender, EventArgs e)
+
+
+        private void FormDepartment_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormDepartmentList frmDept = new FormDepartmentList();
+            frmDept.ShowDialog();
+        }
+
+
+        private void btnSave_Click_1(object sender, EventArgs e)
         {
             if (txtDept.Text.Trim() == "")
                 MessageBox.Show("Please Fill the name field");
@@ -31,18 +46,6 @@ namespace PersonnelTrackingApp
                 MessageBox.Show("Department was added!", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 txtDept.Clear();
             }
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            FormDepartmentList frmDept = new FormDepartmentList();
-            frmDept.ShowDialog();
-        }
-
-        private void FormDepartment_Load(object sender, EventArgs e)
-        {
 
         }
     }

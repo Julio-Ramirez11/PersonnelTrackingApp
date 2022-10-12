@@ -147,6 +147,7 @@
     <Compile Include="TaskUpdate.Designer.cs">
       <DependentUpon>TaskUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserStatic.cs" />
     <EmbeddedResource Include="AddNewEmp.resx">
       <DependentUpon>AddNewEmp.cs</DependentUpon>
     </EmbeddedResource>

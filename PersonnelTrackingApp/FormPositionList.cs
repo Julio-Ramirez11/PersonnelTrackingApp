@@ -57,5 +57,10 @@ namespace PersonnelTrackingApp
             dataGridView1.Columns[0].HeaderText = "Department Name";
             dataGridView1.Columns[2].HeaderText = "Position Name ";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

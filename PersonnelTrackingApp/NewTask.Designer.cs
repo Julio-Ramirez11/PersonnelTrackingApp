@@ -165,6 +165,7 @@ namespace PersonnelTrackingApp
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(360, 460);
             this.dataGridView1.TabIndex = 8;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // label6
@@ -241,6 +242,7 @@ namespace PersonnelTrackingApp
             // 
             // btnSave
             // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.Location = new System.Drawing.Point(183, 549);
             this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnSave.Name = "btnSave";
@@ -252,6 +254,7 @@ namespace PersonnelTrackingApp
             // 
             // btnClose
             // 
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.Location = new System.Drawing.Point(348, 549);
             this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnClose.Name = "btnClose";
@@ -259,6 +262,7 @@ namespace PersonnelTrackingApp
             this.btnClose.TabIndex = 19;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // NewTask
             // 

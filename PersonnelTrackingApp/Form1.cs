@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL;
+using DAL;
 
 namespace PersonnelTrackingApp
 {
@@ -20,16 +22,27 @@ namespace PersonnelTrackingApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtLogin.Text == Convert.ToString("1") && txtPassword.Text == "admin")
+            if (txtLogin.Text.Trim() == "" || txtPassword.Text.Trim() == "")
             {
-                this.Hide();
-                FormTracking frmTrack = new FormTracking();
-                frmTrack.ShowDialog();
-                
+                MessageBox.Show("Please Fill the User or Password", "INVALID!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {
-                MessageBox.Show("Wrong User or Password", "INVALID!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                List<DAL.Employee> employeelist = EmployeeBLL.GetEmployees(Convert.ToInt32(txtLogin.Text), txtPassword.Text);
+                if (employeelist.Count == 0)
+                    MessageBox.Show("Please control your information");
+                else
+                {
+                    DAL.Employee employee = new DAL.Employee();
+                    employee = employeelist.First();
+                    UserStatic.EmployeeID = employee.ID;
+                    UserStatic.UserNo = employee.UserNo;
+                    UserStatic.isAdmin = employee.isAdmin;
+                    FormTracking frmTracking = new FormTracking();
+                    this.Hide();
+                    frmTracking.ShowDialog();
+
+                }
             }
 
         }

@@ -119,5 +119,15 @@ namespace PersonnelTrackingApp
                 task = new DAL.Task();
             }
         }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

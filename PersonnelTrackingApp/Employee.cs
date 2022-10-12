@@ -8,6 +8,7 @@ namespace PersonnelTrackingApp
 {
     public class Employee
     {
+        public int ID { get; set; }
         public int UserNo { get; set; }
         public string EmployeeName { get; set; }
         public string EmployeeSurname { get; set; }

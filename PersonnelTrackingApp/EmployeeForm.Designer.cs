@@ -169,6 +169,7 @@ namespace PersonnelTrackingApp
             this.cmbPos.Name = "cmbPos";
             this.cmbPos.Size = new System.Drawing.Size(113, 39);
             this.cmbPos.TabIndex = 5;
+            this.cmbPos.SelectedIndexChanged += new System.EventHandler(this.cmbPos_SelectedIndexChanged);
             // 
             // button2
             // 

@@ -85,6 +85,7 @@ namespace PersonnelTrackingApp
 
         private void button3_Click(object sender, EventArgs e)
         {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -138,6 +139,11 @@ namespace PersonnelTrackingApp
             if (cmbPos.SelectedIndex != -1)
                 list = list.Where(x => x.PositionID == Convert.ToInt32(cmbPos.SelectedValue)).ToList();
             dataGridView1.DataSource = list;
+
+        }
+
+        private void cmbPos_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
