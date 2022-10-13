@@ -32,9 +32,6 @@ namespace PersonnelTrackingApp
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.chisAdmin = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.btnNewCheck = new System.Windows.Forms.Button();
-            this.btnNewBrowse = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
             this.txtSalary = new System.Windows.Forms.TextBox();
             this.txtImagePath = new System.Windows.Forms.TextBox();
@@ -56,6 +53,9 @@ namespace PersonnelTrackingApp
             this.cmbPosition = new System.Windows.Forms.ComboBox();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txtPassword = new System.Windows.Forms.TextBox();
+            this.btnNewBrowse = new System.Windows.Forms.Button();
+            this.btnNewCheck = new System.Windows.Forms.Button();
+            this.btnSave = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,6 +66,7 @@ namespace PersonnelTrackingApp
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.Size = new System.Drawing.Size(148, 26);
             this.dateTimePicker2.TabIndex = 30;
+            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // chisAdmin
             // 
@@ -91,42 +92,6 @@ namespace PersonnelTrackingApp
             this.button2.Text = "Close";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(297, 588);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(116, 57);
-            this.button1.TabIndex = 27;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // btnNewCheck
-            // 
-            this.btnNewCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewCheck.Location = new System.Drawing.Point(328, 22);
-            this.btnNewCheck.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNewCheck.Name = "btnNewCheck";
-            this.btnNewCheck.Size = new System.Drawing.Size(110, 42);
-            this.btnNewCheck.TabIndex = 26;
-            this.btnNewCheck.Text = "Check";
-            this.btnNewCheck.UseVisualStyleBackColor = true;
-            this.btnNewCheck.Click += new System.EventHandler(this.btnNewCheck_Click);
-            // 
-            // btnNewBrowse
-            // 
-            this.btnNewBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnNewBrowse.Location = new System.Drawing.Point(351, 259);
-            this.btnNewBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnNewBrowse.Name = "btnNewBrowse";
-            this.btnNewBrowse.Size = new System.Drawing.Size(110, 42);
-            this.btnNewBrowse.TabIndex = 25;
-            this.btnNewBrowse.Text = "Browse";
-            this.btnNewBrowse.UseVisualStyleBackColor = true;
-            this.btnNewBrowse.Click += new System.EventHandler(this.btnNewBrowse_Click);
             // 
             // txtAddress
             // 
@@ -327,11 +292,50 @@ namespace PersonnelTrackingApp
             this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 34;
             // 
+            // btnNewBrowse
+            // 
+            this.btnNewBrowse.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewBrowse.Location = new System.Drawing.Point(363, 259);
+            this.btnNewBrowse.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNewBrowse.Name = "btnNewBrowse";
+            this.btnNewBrowse.Size = new System.Drawing.Size(110, 42);
+            this.btnNewBrowse.TabIndex = 35;
+            this.btnNewBrowse.Text = "Browse";
+            this.btnNewBrowse.UseVisualStyleBackColor = true;
+            this.btnNewBrowse.Click += new System.EventHandler(this.btnNewBrowse_Click_1);
+            // 
+            // btnNewCheck
+            // 
+            this.btnNewCheck.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnNewCheck.Location = new System.Drawing.Point(326, 18);
+            this.btnNewCheck.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnNewCheck.Name = "btnNewCheck";
+            this.btnNewCheck.Size = new System.Drawing.Size(110, 42);
+            this.btnNewCheck.TabIndex = 36;
+            this.btnNewCheck.Text = "Check";
+            this.btnNewCheck.UseVisualStyleBackColor = true;
+            this.btnNewCheck.Click += new System.EventHandler(this.btnNewCheck_Click_1);
+            // 
+            // btnSave
+            // 
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.Location = new System.Drawing.Point(320, 588);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(116, 57);
+            this.btnSave.TabIndex = 37;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // EmployeeUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 665);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnNewCheck);
+            this.Controls.Add(this.btnNewBrowse);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.cmbPosition);
             this.Controls.Add(this.cmbDepartment);
@@ -339,9 +343,6 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.chisAdmin);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnNewCheck);
-            this.Controls.Add(this.btnNewBrowse);
             this.Controls.Add(this.txtAddress);
             this.Controls.Add(this.txtSalary);
             this.Controls.Add(this.txtImagePath);
@@ -375,9 +376,6 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox chisAdmin;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button btnNewCheck;
-        private System.Windows.Forms.Button btnNewBrowse;
         private System.Windows.Forms.TextBox txtAddress;
         private System.Windows.Forms.TextBox txtSalary;
         private System.Windows.Forms.TextBox txtImagePath;
@@ -399,5 +397,8 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.ComboBox cmbPosition;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txtPassword;
+        private System.Windows.Forms.Button btnNewBrowse;
+        private System.Windows.Forms.Button btnNewCheck;
+        private System.Windows.Forms.Button btnSave;
     }
 }

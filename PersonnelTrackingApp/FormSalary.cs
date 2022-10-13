@@ -71,6 +71,7 @@ namespace PersonnelTrackingApp
             cmbMonth.ValueMember = "ID";
             cmbMonth.SelectedIndex = -1;
         }
+        SalaryDetailDTO detail = new SalaryDetailDTO();
         private void FormSalary_Load(object sender, EventArgs e)
         {
             FillAllData();
@@ -154,6 +155,40 @@ namespace PersonnelTrackingApp
         private void cmbPos_SelectedIndexChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail.Name = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detail.Surname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detail.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detail.SalaryID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[12].Value);
+            detail.EmployeeID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detail.SalaryYear = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
+            detail.MonthID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[10].Value);
+            detail.SalaryAmount = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+            detail.OldSalary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[11].Value);
+
+
+
+
+        }
+
+        private void btnSalUpdate_Click(object sender, EventArgs e)
+        {
+            if (detail.SalaryID == 0)
+            MessageBox.Show("Please select a salary from table");
+            else
+            {
+                FormSalaryAdd frm = new FormSalaryAdd();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                FillAllData();
+                CleanFilters();
+            }
         }
     }
 }

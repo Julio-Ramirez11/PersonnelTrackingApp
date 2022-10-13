@@ -31,28 +31,18 @@ namespace PersonnelTrackingApp
         {
             this.btnPerApp = new System.Windows.Forms.Button();
             this.rbTaskStart = new System.Windows.Forms.RadioButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnPerExport = new System.Windows.Forms.Button();
             this.btnPerClean = new System.Windows.Forms.Button();
             this.btnPerSearch = new System.Windows.Forms.Button();
             this.btnPerClose = new System.Windows.Forms.Button();
             this.btnPerDel = new System.Windows.Forms.Button();
             this.btnPerNew = new System.Windows.Forms.Button();
-            this.rbTaskDeliver = new System.Windows.Forms.RadioButton();
+            this.rbEndDate = new System.Windows.Forms.RadioButton();
             this.btnPerUpd = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.cbTaskState = new System.Windows.Forms.ComboBox();
-            this.dtTaskFinish = new System.Windows.Forms.DateTimePicker();
-            this.dtTaskStart = new System.Windows.Forms.DateTimePicker();
-            this.txtPerPos = new System.Windows.Forms.TextBox();
-            this.txtPerDept = new System.Windows.Forms.TextBox();
+            this.cmbState = new System.Windows.Forms.ComboBox();
+            this.dpEnd = new System.Windows.Forms.DateTimePicker();
+            this.dpStart = new System.Windows.Forms.DateTimePicker();
             this.txtPerName = new System.Windows.Forms.TextBox();
             this.txtPerSurname = new System.Windows.Forms.TextBox();
             this.txtPerUser = new System.Windows.Forms.TextBox();
@@ -68,8 +58,11 @@ namespace PersonnelTrackingApp
             this.label10 = new System.Windows.Forms.Label();
             this.txtPerDay = new System.Windows.Forms.TextBox();
             this.btnPerDisapp = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.cmbDept = new System.Windows.Forms.ComboBox();
+            this.cmbPos = new System.Windows.Forms.ComboBox();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // btnPerApp
@@ -82,6 +75,7 @@ namespace PersonnelTrackingApp
             this.btnPerApp.TabIndex = 32;
             this.btnPerApp.Text = "Approve";
             this.btnPerApp.UseVisualStyleBackColor = true;
+            this.btnPerApp.Click += new System.EventHandler(this.btnPerApp_Click);
             // 
             // rbTaskStart
             // 
@@ -95,73 +89,6 @@ namespace PersonnelTrackingApp
             this.rbTaskStart.TabStop = true;
             this.rbTaskStart.Text = "Start Date";
             this.rbTaskStart.UseVisualStyleBackColor = true;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column7});
-            this.dataGridView1.Location = new System.Drawing.Point(21, 303);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.Size = new System.Drawing.Size(940, 282);
-            this.dataGridView1.TabIndex = 33;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Task Title";
-            this.Column1.MinimumWidth = 8;
-            this.Column1.Name = "Column1";
-            this.Column1.Width = 150;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "User No";
-            this.Column2.MinimumWidth = 8;
-            this.Column2.Name = "Column2";
-            this.Column2.Width = 150;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Name";
-            this.Column3.MinimumWidth = 8;
-            this.Column3.Name = "Column3";
-            this.Column3.Width = 150;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Surname";
-            this.Column4.MinimumWidth = 8;
-            this.Column4.Name = "Column4";
-            this.Column4.Width = 150;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Start Date";
-            this.Column5.MinimumWidth = 8;
-            this.Column5.Name = "Column5";
-            this.Column5.Width = 150;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Delivery Date";
-            this.Column6.MinimumWidth = 8;
-            this.Column6.Name = "Column6";
-            this.Column6.Width = 150;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "Task State";
-            this.Column7.MinimumWidth = 8;
-            this.Column7.Name = "Column7";
-            this.Column7.Width = 150;
             // 
             // btnPerExport
             // 
@@ -184,6 +111,7 @@ namespace PersonnelTrackingApp
             this.btnPerClean.TabIndex = 30;
             this.btnPerClean.Text = "Clean";
             this.btnPerClean.UseVisualStyleBackColor = true;
+            this.btnPerClean.Click += new System.EventHandler(this.btnPerClean_Click);
             // 
             // btnPerSearch
             // 
@@ -195,6 +123,7 @@ namespace PersonnelTrackingApp
             this.btnPerSearch.TabIndex = 29;
             this.btnPerSearch.Text = "Search";
             this.btnPerSearch.UseVisualStyleBackColor = true;
+            this.btnPerSearch.Click += new System.EventHandler(this.btnPerSearch_Click);
             // 
             // btnPerClose
             // 
@@ -231,18 +160,18 @@ namespace PersonnelTrackingApp
             this.btnPerNew.UseVisualStyleBackColor = true;
             this.btnPerNew.Click += new System.EventHandler(this.btnPerNew_Click);
             // 
-            // rbTaskDeliver
+            // rbEndDate
             // 
-            this.rbTaskDeliver.AutoSize = true;
-            this.rbTaskDeliver.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rbTaskDeliver.Location = new System.Drawing.Point(21, 65);
-            this.rbTaskDeliver.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.rbTaskDeliver.Name = "rbTaskDeliver";
-            this.rbTaskDeliver.Size = new System.Drawing.Size(128, 35);
-            this.rbTaskDeliver.TabIndex = 1;
-            this.rbTaskDeliver.TabStop = true;
-            this.rbTaskDeliver.Text = "Delivery";
-            this.rbTaskDeliver.UseVisualStyleBackColor = true;
+            this.rbEndDate.AutoSize = true;
+            this.rbEndDate.Font = new System.Drawing.Font("Nirmala UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rbEndDate.Location = new System.Drawing.Point(21, 65);
+            this.rbEndDate.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.rbEndDate.Name = "rbEndDate";
+            this.rbEndDate.Size = new System.Drawing.Size(135, 35);
+            this.rbEndDate.TabIndex = 1;
+            this.rbEndDate.TabStop = true;
+            this.rbEndDate.Text = "End Date";
+            this.rbEndDate.UseVisualStyleBackColor = true;
             // 
             // btnPerUpd
             // 
@@ -258,7 +187,7 @@ namespace PersonnelTrackingApp
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.rbTaskDeliver);
+            this.groupBox1.Controls.Add(this.rbEndDate);
             this.groupBox1.Controls.Add(this.rbTaskStart);
             this.groupBox1.Location = new System.Drawing.Point(758, 28);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -268,46 +197,30 @@ namespace PersonnelTrackingApp
             this.groupBox1.TabIndex = 24;
             this.groupBox1.TabStop = false;
             // 
-            // cbTaskState
+            // cmbState
             // 
-            this.cbTaskState.FormattingEnabled = true;
-            this.cbTaskState.Location = new System.Drawing.Point(518, 206);
-            this.cbTaskState.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.cbTaskState.Name = "cbTaskState";
-            this.cbTaskState.Size = new System.Drawing.Size(180, 28);
-            this.cbTaskState.TabIndex = 23;
+            this.cmbState.FormattingEnabled = true;
+            this.cmbState.Location = new System.Drawing.Point(518, 206);
+            this.cmbState.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbState.Name = "cmbState";
+            this.cmbState.Size = new System.Drawing.Size(180, 28);
+            this.cmbState.TabIndex = 23;
             // 
-            // dtTaskFinish
+            // dpEnd
             // 
-            this.dtTaskFinish.Location = new System.Drawing.Point(518, 106);
-            this.dtTaskFinish.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtTaskFinish.Name = "dtTaskFinish";
-            this.dtTaskFinish.Size = new System.Drawing.Size(180, 26);
-            this.dtTaskFinish.TabIndex = 21;
+            this.dpEnd.Location = new System.Drawing.Point(518, 106);
+            this.dpEnd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpEnd.Name = "dpEnd";
+            this.dpEnd.Size = new System.Drawing.Size(180, 26);
+            this.dpEnd.TabIndex = 21;
             // 
-            // dtTaskStart
+            // dpStart
             // 
-            this.dtTaskStart.Location = new System.Drawing.Point(518, 62);
-            this.dtTaskStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dtTaskStart.Name = "dtTaskStart";
-            this.dtTaskStart.Size = new System.Drawing.Size(180, 26);
-            this.dtTaskStart.TabIndex = 22;
-            // 
-            // txtPerPos
-            // 
-            this.txtPerPos.Location = new System.Drawing.Point(171, 225);
-            this.txtPerPos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPerPos.Name = "txtPerPos";
-            this.txtPerPos.Size = new System.Drawing.Size(148, 26);
-            this.txtPerPos.TabIndex = 20;
-            // 
-            // txtPerDept
-            // 
-            this.txtPerDept.Location = new System.Drawing.Point(171, 177);
-            this.txtPerDept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.txtPerDept.Name = "txtPerDept";
-            this.txtPerDept.Size = new System.Drawing.Size(148, 26);
-            this.txtPerDept.TabIndex = 19;
+            this.dpStart.Location = new System.Drawing.Point(518, 62);
+            this.dpStart.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dpStart.Name = "dpStart";
+            this.dpStart.Size = new System.Drawing.Size(180, 26);
+            this.dpStart.TabIndex = 22;
             // 
             // txtPerName
             // 
@@ -342,7 +255,7 @@ namespace PersonnelTrackingApp
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(187, 31);
             this.label8.TabIndex = 14;
-            this.label8.Text = "Permission Data";
+            this.label8.Text = "Permission Date";
             // 
             // label7
             // 
@@ -445,7 +358,7 @@ namespace PersonnelTrackingApp
             // 
             // txtPerDay
             // 
-            this.txtPerDay.Location = new System.Drawing.Point(518, 154);
+            this.txtPerDay.Location = new System.Drawing.Point(519, 157);
             this.txtPerDay.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txtPerDay.Name = "txtPerDay";
             this.txtPerDay.Size = new System.Drawing.Size(180, 26);
@@ -461,17 +374,48 @@ namespace PersonnelTrackingApp
             this.btnPerDisapp.TabIndex = 36;
             this.btnPerDisapp.Text = "Disapprove";
             this.btnPerDisapp.UseVisualStyleBackColor = true;
+            this.btnPerDisapp.Click += new System.EventHandler(this.btnPerDisapp_Click);
+            // 
+            // cmbDept
+            // 
+            this.cmbDept.FormattingEnabled = true;
+            this.cmbDept.Location = new System.Drawing.Point(171, 177);
+            this.cmbDept.Name = "cmbDept";
+            this.cmbDept.Size = new System.Drawing.Size(148, 28);
+            this.cmbDept.TabIndex = 37;
+            // 
+            // cmbPos
+            // 
+            this.cmbPos.FormattingEnabled = true;
+            this.cmbPos.Location = new System.Drawing.Point(171, 228);
+            this.cmbPos.Name = "cmbPos";
+            this.cmbPos.Size = new System.Drawing.Size(148, 28);
+            this.cmbPos.TabIndex = 38;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 288);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 62;
+            this.dataGridView1.RowTemplate.Height = 28;
+            this.dataGridView1.Size = new System.Drawing.Size(952, 298);
+            this.dataGridView1.TabIndex = 39;
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // FormPermission
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 665);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.cmbPos);
+            this.Controls.Add(this.cmbDept);
             this.Controls.Add(this.btnPerDisapp);
             this.Controls.Add(this.txtPerDay);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.btnPerApp);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnPerExport);
             this.Controls.Add(this.btnPerClean);
             this.Controls.Add(this.btnPerSearch);
@@ -480,11 +424,9 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.btnPerNew);
             this.Controls.Add(this.btnPerUpd);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.cbTaskState);
-            this.Controls.Add(this.dtTaskFinish);
-            this.Controls.Add(this.dtTaskStart);
-            this.Controls.Add(this.txtPerPos);
-            this.Controls.Add(this.txtPerDept);
+            this.Controls.Add(this.cmbState);
+            this.Controls.Add(this.dpEnd);
+            this.Controls.Add(this.dpStart);
             this.Controls.Add(this.txtPerName);
             this.Controls.Add(this.txtPerSurname);
             this.Controls.Add(this.txtPerUser);
@@ -501,9 +443,9 @@ namespace PersonnelTrackingApp
             this.Name = "FormPermission";
             this.Text = "FormPermission";
             this.Load += new System.EventHandler(this.FormPermission_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,28 +455,18 @@ namespace PersonnelTrackingApp
 
         private System.Windows.Forms.Button btnPerApp;
         private System.Windows.Forms.RadioButton rbTaskStart;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
         private System.Windows.Forms.Button btnPerExport;
         private System.Windows.Forms.Button btnPerClean;
         private System.Windows.Forms.Button btnPerSearch;
         private System.Windows.Forms.Button btnPerClose;
         private System.Windows.Forms.Button btnPerDel;
         private System.Windows.Forms.Button btnPerNew;
-        private System.Windows.Forms.RadioButton rbTaskDeliver;
+        private System.Windows.Forms.RadioButton rbEndDate;
         private System.Windows.Forms.Button btnPerUpd;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.ComboBox cbTaskState;
-        private System.Windows.Forms.DateTimePicker dtTaskFinish;
-        private System.Windows.Forms.DateTimePicker dtTaskStart;
-        private System.Windows.Forms.TextBox txtPerPos;
-        private System.Windows.Forms.TextBox txtPerDept;
+        private System.Windows.Forms.ComboBox cmbState;
+        private System.Windows.Forms.DateTimePicker dpEnd;
+        private System.Windows.Forms.DateTimePicker dpStart;
         private System.Windows.Forms.TextBox txtPerName;
         private System.Windows.Forms.TextBox txtPerSurname;
         private System.Windows.Forms.TextBox txtPerUser;
@@ -550,5 +482,8 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtPerDay;
         private System.Windows.Forms.Button btnPerDisapp;
+        private System.Windows.Forms.ComboBox cmbDept;
+        private System.Windows.Forms.ComboBox cmbPos;
+        private System.Windows.Forms.DataGridView dataGridView1;
     }
 }

@@ -120,6 +120,12 @@
     <Compile Include="FormSalaryAdd.Designer.cs">
       <DependentUpon>FormSalaryAdd.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSalaryUpdate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSalaryUpdate.Designer.cs">
+      <DependentUpon>FormSalaryUpdate.cs</DependentUpon>
+    </Compile>
     <Compile Include="general.cs" />
     <Compile Include="NewTask.cs">
       <SubType>Form</SubType>

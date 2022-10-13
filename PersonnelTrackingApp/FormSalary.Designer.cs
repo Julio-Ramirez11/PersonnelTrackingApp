@@ -304,6 +304,7 @@ namespace PersonnelTrackingApp
             this.dataGridView1.Size = new System.Drawing.Size(921, 295);
             this.dataGridView1.TabIndex = 31;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // btnSalNew
             // 
@@ -329,6 +330,7 @@ namespace PersonnelTrackingApp
             this.btnSalUpdate.TabIndex = 33;
             this.btnSalUpdate.Text = "Update";
             this.btnSalUpdate.UseVisualStyleBackColor = true;
+            this.btnSalUpdate.Click += new System.EventHandler(this.btnSalUpdate_Click);
             // 
             // btnSalClose
             // 

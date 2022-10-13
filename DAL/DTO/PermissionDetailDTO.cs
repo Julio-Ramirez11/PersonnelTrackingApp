@@ -24,5 +24,7 @@ namespace DAL.DTO
         public int State { get; set; }
 
         public String Explanation { get; set; }
+
+        public int PermissionID { get; set; }
     }
 }

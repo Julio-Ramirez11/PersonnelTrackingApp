@@ -348,6 +348,7 @@ namespace PersonnelTrackingApp
             this.btnTaskUpd.TabIndex = 5;
             this.btnTaskUpd.Text = "Update";
             this.btnTaskUpd.UseVisualStyleBackColor = true;
+            this.btnTaskUpd.Click += new System.EventHandler(this.btnTaskUpd_Click);
             // 
             // pnlForAdmin
             // 
@@ -406,6 +407,8 @@ namespace PersonnelTrackingApp
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.Size = new System.Drawing.Size(927, 256);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.dataGridView1.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_RowEnter);
             // 
             // Task
             // 

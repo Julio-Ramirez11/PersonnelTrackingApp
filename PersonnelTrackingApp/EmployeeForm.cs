@@ -25,7 +25,9 @@ namespace PersonnelTrackingApp
         }
         EmployeeDTO dto = new EmployeeDTO();
         private bool combofull = false;
-        private void EmployeeForm_Load(object sender, EventArgs e)
+        EmployeeDetailDTO detail = new EmployeeDetailDTO();
+
+        void FillAllData()
         {
             dto = EmployeeBLL.GetALL();
             dataGridView1.DataSource = dto.Employees;
@@ -52,8 +54,10 @@ namespace PersonnelTrackingApp
             cmbDept.SelectedIndex = -1;
             cmbPos.SelectedIndex = -1;
             combofull = true;
-
-
+        }
+        private void EmployeeForm_Load(object sender, EventArgs e)
+        {
+            FillAllData();
 
         }
 
@@ -71,6 +75,11 @@ namespace PersonnelTrackingApp
         }
 
         private void button2_Click(object sender, EventArgs e)
+        {
+            ClearFilter();
+        }
+
+        private void ClearFilter()
         {
             txtEmpUserNo.Clear();
             txtEmpName.Clear();
@@ -107,10 +116,14 @@ namespace PersonnelTrackingApp
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
+            if (detail.EmployeeID == 0)
+                MessageBox.Show("Please select an employee on table");
             this.Hide();
             EmployeeUpdate FrmUpd = new EmployeeUpdate();
             FrmUpd.ShowDialog();
             this.Visible = true;
+            FillAllData();
+            ClearFilter(); 
         }
 
         private void button1_Click_1(object sender, EventArgs e)
@@ -120,6 +133,21 @@ namespace PersonnelTrackingApp
 
         private void button3_Click_1(object sender, EventArgs e)
         {
+            if (detail.EmployeeID == 0)
+                MessageBox.Show("Please select an employee on table");
+            else
+            {
+                EmployeeUpdate frm = new EmployeeUpdate();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                FillAllData();
+                ClearFilter();
+            }
+            
+            
             this.Hide();
             FormAddNewEmp FrmNewEmp = new FormAddNewEmp();
             FrmNewEmp.ShowDialog();
@@ -144,6 +172,23 @@ namespace PersonnelTrackingApp
 
         private void cmbPos_SelectedIndexChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail.Name = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+            detail.Surname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            detail.Password = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+            detail.ImagePath = dataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            detail.Address = dataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+            detail.isAdmin = Convert.ToBoolean(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
+            detail.BirthDay = Convert.ToDateTime(dataGridView1.Rows[e.RowIndex].Cells[13].Value);
+            detail.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
+            detail.DepartmentID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
+            detail.PositionID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
+            detail.EmployeeID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detail.Salary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
 
         }
     }

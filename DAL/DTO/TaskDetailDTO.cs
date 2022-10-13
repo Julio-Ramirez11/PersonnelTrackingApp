@@ -15,6 +15,7 @@ namespace DAL.DTO
         public DateTime? TaskStartDate { get; set; }
         public DateTime? TaskDeliveryDate { get; set; }
         public string TaskStateName { get; set; }
+        public string Password  { get; set; }
         public string DepartmentName { get; set; }
         public string PositionName { get; set; }
         public int DepartmentID { get; set; }
@@ -22,6 +23,6 @@ namespace DAL.DTO
         public int TaskID { get; set; }
         public int EmployeeID { get; set; }
         public string Content { get; set; }
-        public int taskStateID { get; set; }
+        public int TaskStateID { get; set; }
     }
 }

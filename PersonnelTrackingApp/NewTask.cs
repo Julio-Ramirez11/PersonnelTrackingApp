@@ -27,6 +27,8 @@ namespace PersonnelTrackingApp
         }
         TaskDTO dto = new TaskDTO();
         private bool combofull = false;
+        public bool isUpdate = false;
+        public TaskDetailDTO detail = new TaskDetailDTO();
 
         private void NewTask_Load(object sender, EventArgs e)
         {
@@ -62,6 +64,23 @@ namespace PersonnelTrackingApp
             cmbTaskState.DisplayMember = "Statement";
             cmbTaskState.ValueMember = "ID";
             cmbTaskState.SelectedIndex = -1;
+            if(isUpdate)
+            {
+                label8.Visible = true;
+                cmbTaskState.Visible = true;
+                txtName.Text = detail.Name;
+                txtUserNo.Text = detail.UserNo.ToString();
+                txtSurname.Text = detail.Surname;
+                txtTitle.Text = detail.Title;
+                txtContent.Text = detail.Content;
+                cmbTaskState.DataSource = dto.TaskStates;
+                cmbTaskState.DisplayMember = "StateName";
+                cmbTaskState.ValueMember = "ID";
+                cmbTaskState.SelectedValue = detail.TaskStateID; 
+            }
+
+
+
         }
 
         private void cmbDept_SelectedIndexChanged(object sender, EventArgs e)
@@ -108,15 +127,37 @@ namespace PersonnelTrackingApp
                 MessageBox.Show("Content is empty");
             else
             {
-                task.TaskTitle = txtTitle.Text;
-                task.TaskContent = txtContent.Text;
-                task.TaskStartDate = DateTime.Today;
-                task.TaskStae = 1;
-                TaskBLL.AddTask(task);
-                MessageBox.Show("Task was added");
-                txtTitle.Clear();
-                txtContent.Clear();
-                task = new DAL.Task();
+                if (!isUpdate)
+                {
+                    task.TaskTitle = txtTitle.Text;
+                    task.TaskContent = txtContent.Text;
+                    task.TaskStartDate = DateTime.Today;
+                    task.TaskStae = 1;
+                    TaskBLL.AddTask(task);
+                    MessageBox.Show("Task was added");
+                    txtTitle.Clear();
+                    txtContent.Clear();
+                    task = new DAL.Task();
+                }
+                else if(isUpdate)
+                {
+                    DialogResult result = MessageBox.Show("Are you sure?", "Warning!!", MessageBoxButtons.YesNo);
+                    if(result == DialogResult.Yes)
+                    {
+                        DAL.Task update = new DAL.Task();
+                        update.ID = detail.TaskID;
+                        if (Convert.ToInt32(txtUserNo.Text) != detail.UserNo)
+                            update.EmployeeID = task.EmployeeID;
+                        else
+                            update.EmployeeID = detail.EmployeeID;
+                        update.TaskTitle = txtTitle.Text;
+                        update.TaskContent = txtContent.Text;
+                        update.TaskStae = Convert.ToInt32(cmbTaskState.SelectedValue);
+                        TaskBLL.UpdateTask(update);
+                        MessageBox.Show("Task was Update");
+                        this.Close();
+                    }
+                }
             }
         }
 
