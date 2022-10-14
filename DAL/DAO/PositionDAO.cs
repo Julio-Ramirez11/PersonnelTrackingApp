@@ -55,5 +55,36 @@ namespace DAL.DAO
                 throw ex;
             }
         }
+
+        public static void DeletePosition(int iD)
+        {
+            try
+            {
+                Position postion = db.Positions.First(x => x.ID == iD);
+                db.Positions.DeleteOnSubmit(postion);
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
+
+        public static void UpdatePostion(Position position)
+        {
+            try
+            {
+                DAL.Position pst = db.Positions.First(x => x.ID == position.ID);
+                pst.PositionName = position.PositionName;
+                pst.DepartmentID = position.DepartmentID;
+                db.SubmitChanges();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+        }
     }
 }

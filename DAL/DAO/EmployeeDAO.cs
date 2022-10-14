@@ -64,12 +64,61 @@ namespace DAL.DAO
                 dto.Salary = item.Salary;
                 dto.BirthDay = item.birthDay;
                 dto.Address = item.Address;
+                dto.ImagePath = item.ImagePath;
                 employeeList.Add(dto);
             }
 
 
 
             return employeeList;
+        }
+
+        public static void DeleteEmployee(int employeeID)
+        {
+            try
+            {
+                Employee emp = db.Employees.First(x => x.ID == employeeID);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public static void UpdateEmployee(Position position)
+        {
+            List<Employee> list = db.Employees.Where(x => x.PositionID == position.ID).ToList();
+            foreach (var item in list)
+            {
+                item.DepartmentID = position.DepartmentID;
+            }
+            db.SubmitChanges();
+        }
+
+        public static void UpdateEmployee(Employee employee)
+        {
+            try
+            {
+                Employee emp = db.Employees.First(x => x.ID == employee.ID);
+                emp.UserNo = employee.UserNo;
+                emp.Name = employee.Name;
+                emp.Surname = employee.Surname;
+                emp.Password = employee.Password;
+                emp.isAdmin = employee.isAdmin;
+                emp.BirthDay = employee.BirthDay;
+                emp.Address = employee.Address;
+                emp.DepartmentID = employee.DepartmentID;
+                emp.PositionID = employee.PositionID;
+                emp.Salary = employee.Salary;
+                db.SubmitChanges(); 
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static void UpdateEmployee(int? employeeID, int? amount)

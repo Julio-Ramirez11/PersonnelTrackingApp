@@ -50,7 +50,11 @@ namespace PersonnelTrackingApp
 
         private void FormTracking_Load(object sender, EventArgs e)
         {
-
+            if(!UserStatic.isAdmin)
+            {
+                btnDept.Visible = false;
+                btnPos.Visible = false;
+            }
         }
 
         private void btnTasks_Click(object sender, EventArgs e)

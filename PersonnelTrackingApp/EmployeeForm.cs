@@ -99,7 +99,14 @@ namespace PersonnelTrackingApp
 
         private void button1_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Are you sure to delete this Employee?", "Warning!", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                EmployeeBLL.UpdateSalary(detail.EmployeeID);
+                MessageBox.Show("Employee was Deleted");
+                FillAllData();
+                ClearFilter();
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -147,10 +154,7 @@ namespace PersonnelTrackingApp
                 ClearFilter();
             }
             
-            
-            this.Hide();
-            FormAddNewEmp FrmNewEmp = new FormAddNewEmp();
-            FrmNewEmp.ShowDialog();
+          
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -177,6 +181,7 @@ namespace PersonnelTrackingApp
 
         private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
         {
+            detail.UserNo = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[1].Value);
             detail.Name = dataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
             detail.Surname = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
             detail.Password = dataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
@@ -188,7 +193,7 @@ namespace PersonnelTrackingApp
             detail.DepartmentID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[6].Value);
             detail.PositionID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[7].Value);
             detail.EmployeeID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
-            detail.Salary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[8].Value);
+            detail.Salary = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[9].Value);
 
         }
     }

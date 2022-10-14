@@ -53,6 +53,7 @@ namespace PersonnelTrackingApp
             this.txtDept.Name = "txtDept";
             this.txtDept.Size = new System.Drawing.Size(148, 26);
             this.txtDept.TabIndex = 0;
+            this.txtDept.TextChanged += new System.EventHandler(this.txtDept_TextChanged);
             // 
             // button3
             // 

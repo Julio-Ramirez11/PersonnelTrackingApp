@@ -299,6 +299,7 @@ namespace PersonnelTrackingApp
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(22, 283);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 62;
             this.dataGridView1.Size = new System.Drawing.Size(921, 295);
@@ -356,6 +357,7 @@ namespace PersonnelTrackingApp
             this.btnSalDel.TabIndex = 34;
             this.btnSalDel.Text = "Delete";
             this.btnSalDel.UseVisualStyleBackColor = true;
+            this.btnSalDel.Click += new System.EventHandler(this.btnSalDel_Click);
             // 
             // cmbDept
             // 

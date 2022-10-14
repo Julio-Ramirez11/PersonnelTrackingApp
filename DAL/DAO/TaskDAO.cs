@@ -65,7 +65,6 @@ namespace DAL.DAO
                 dto.TaskStartDate = item.startdate;
                 dto.TaskDeliveryDate = item.deliverydate;
                 dto.TaskStateName = item.taskStateName;
-                dto.TaskStateID = item.taskStateID;
                 dto.UserNo = item.UserNo;
                 dto.Name = item.Name;
                 dto.Surname = item.Surname;
@@ -73,10 +72,26 @@ namespace DAL.DAO
                 dto.PositionID = item.positionID;
                 dto.PositionName = item.positionName;
                 dto.EmployeeID = item.EmployeeId;
+                dto.TaskStateID = item.taskStateID;
                 tasklist.Add(dto);
 
             }
             return tasklist;
+        }
+
+        public static void DeleteTask(int taskID)
+        {
+            try
+            {
+                Task ts = db.Tasks.First(x => x.ID == taskID);
+                db.Tasks.DeleteOnSubmit(ts);
+                db.SubmitChanges(); 
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
         }
 
         public static void UpdateTask(Task task)

@@ -37,7 +37,7 @@ namespace PersonnelTrackingApp
                     employee = employeelist.First();
                     UserStatic.EmployeeID = employee.ID;
                     UserStatic.UserNo = employee.UserNo;
-                    UserStatic.isAdmin = employee.isAdmin;
+                    UserStatic.isAdmin = Convert.ToBoolean(employee.isAdmin);
                     FormTracking frmTracking = new FormTracking();
                     this.Hide();
                     frmTracking.ShowDialog();

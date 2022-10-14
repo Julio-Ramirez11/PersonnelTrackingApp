@@ -39,13 +39,23 @@ namespace PersonnelTrackingApp
 
         private void button3_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            FormDepartment FrmDept = new FormDepartment();
-            FrmDept.ShowDialog();
-            this.Visible = true;
+            if (detail.ID == 0)
+                MessageBox.Show("Please select a department from table");
+            else
+            {
+                FormDepartment frm = new FormDepartment();
+                frm.isUpdate = true;
+                frm.detail = detail;
+                this.Hide();
+                frm.ShowDialog();
+                this.Visible = true;
+                list = DepartmentBLL.GetDepartment();
+                dataGridView1.DataSource = list;
+            }
         }
 
         List<Department> list = new List<Department>();
+        public Department detail = new Department();
         private void FormDepartmentList_Load(object sender, EventArgs e)
         {
             
@@ -59,6 +69,25 @@ namespace PersonnelTrackingApp
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void dataGridView1_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            detail.ID = Convert.ToInt32(dataGridView1.Rows[e.RowIndex].Cells[0].Value);
+            detail.DepartmentName = dataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure to delete this Department?", "Warning!", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                DepartmentBLL.DeleteDepartment(detail.ID);
+                MessageBox.Show("Department was deleted");
+
+                list = DepartmentBLL.GetDepartment();
+                dataGridView1.DataSource = list;
+            }
         }
     }
 }

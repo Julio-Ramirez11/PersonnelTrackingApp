@@ -20,10 +20,12 @@ namespace PersonnelTrackingApp
         }
 
 
-
+        public bool isUpdate = false;
+        public DAL.Department detail = new DAL.Department();
         private void FormDepartment_Load(object sender, EventArgs e)
         {
-
+            if (isUpdate)
+                txtDept.Text = detail.DepartmentName;
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -41,11 +43,31 @@ namespace PersonnelTrackingApp
             else
             {
                 Department department = new Department();
-                department.DepartmentName = txtDept.Text;
-                BLL.DepartmentBLL.AddDepartment(department);
-                MessageBox.Show("Department was added!", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                txtDept.Clear();
+                if(!isUpdate)
+                {
+                    department.DepartmentName = txtDept.Text;
+                    BLL.DepartmentBLL.AddDepartment(department);
+                    MessageBox.Show("Department was added!", "Successful!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDept.Clear();
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show("Are you sure?", "Warning!", MessageBoxButtons.YesNo);
+                    if(DialogResult.Yes==result)
+                    {
+                        department.ID = detail.ID;
+                        department.DepartmentName = txtDept.Text;
+                        DepartmentBLL.UpdateDepartment(department);
+                        MessageBox.Show("Department was updated");
+                        this.Close();
+                    }
+                }
             }
+
+        }
+
+        private void txtDept_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

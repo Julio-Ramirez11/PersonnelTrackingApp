@@ -518,8 +518,11 @@ namespace DAL
 				}
 			}
 		}
-		
-		public event PropertyChangingEventHandler PropertyChanging;
+
+        public static int Approved { get; set; }
+        public static int Disapproved { get; set; }
+
+        public event PropertyChangingEventHandler PropertyChanging;
 		
 		public event PropertyChangedEventHandler PropertyChanged;
 		

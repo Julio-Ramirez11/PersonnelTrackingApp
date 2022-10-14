@@ -30,26 +30,26 @@ namespace PersonnelTrackingApp
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormTracking));
-            this.btnTrackEmp = new System.Windows.Forms.Button();
+            this.btnEmp = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnTasks = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnSal = new System.Windows.Forms.Button();
+            this.btnPer = new System.Windows.Forms.Button();
+            this.btnDept = new System.Windows.Forms.Button();
+            this.btnPos = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnTrackEmp
+            // btnEmp
             // 
-            this.btnTrackEmp.Location = new System.Drawing.Point(23, 58);
-            this.btnTrackEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnTrackEmp.Name = "btnTrackEmp";
-            this.btnTrackEmp.Size = new System.Drawing.Size(198, 109);
-            this.btnTrackEmp.TabIndex = 0;
-            this.btnTrackEmp.Text = "Employee";
-            this.btnTrackEmp.UseVisualStyleBackColor = true;
-            this.btnTrackEmp.Click += new System.EventHandler(this.button1_Click_1);
+            this.btnEmp.Location = new System.Drawing.Point(23, 58);
+            this.btnEmp.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEmp.Name = "btnEmp";
+            this.btnEmp.Size = new System.Drawing.Size(198, 109);
+            this.btnEmp.TabIndex = 0;
+            this.btnEmp.Text = "Employee";
+            this.btnEmp.UseVisualStyleBackColor = true;
+            this.btnEmp.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // btnLogout
             // 
@@ -84,49 +84,49 @@ namespace PersonnelTrackingApp
             this.btnTasks.UseVisualStyleBackColor = true;
             this.btnTasks.Click += new System.EventHandler(this.btnTasks_Click);
             // 
-            // button1
+            // btnSal
             // 
-            this.button1.Location = new System.Drawing.Point(437, 58);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(198, 109);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Salary";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click_2);
+            this.btnSal.Location = new System.Drawing.Point(437, 58);
+            this.btnSal.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnSal.Name = "btnSal";
+            this.btnSal.Size = new System.Drawing.Size(198, 109);
+            this.btnSal.TabIndex = 4;
+            this.btnSal.Text = "Salary";
+            this.btnSal.UseVisualStyleBackColor = true;
+            this.btnSal.Click += new System.EventHandler(this.button1_Click_2);
             // 
-            // button2
+            // btnPer
             // 
-            this.button2.Location = new System.Drawing.Point(23, 177);
-            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(198, 109);
-            this.button2.TabIndex = 5;
-            this.button2.Text = "Permission";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click_1);
+            this.btnPer.Location = new System.Drawing.Point(23, 177);
+            this.btnPer.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPer.Name = "btnPer";
+            this.btnPer.Size = new System.Drawing.Size(198, 109);
+            this.btnPer.TabIndex = 5;
+            this.btnPer.Text = "Permission";
+            this.btnPer.UseVisualStyleBackColor = true;
+            this.btnPer.Click += new System.EventHandler(this.button2_Click_1);
             // 
-            // button3
+            // btnDept
             // 
-            this.button3.Location = new System.Drawing.Point(229, 177);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(198, 109);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Department";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click_1);
+            this.btnDept.Location = new System.Drawing.Point(229, 177);
+            this.btnDept.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnDept.Name = "btnDept";
+            this.btnDept.Size = new System.Drawing.Size(198, 109);
+            this.btnDept.TabIndex = 6;
+            this.btnDept.Text = "Department";
+            this.btnDept.UseVisualStyleBackColor = true;
+            this.btnDept.Click += new System.EventHandler(this.button3_Click_1);
             // 
-            // button4
+            // btnPos
             // 
-            this.button4.Location = new System.Drawing.Point(437, 177);
-            this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(198, 109);
-            this.button4.TabIndex = 7;
-            this.button4.Text = "Position";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnPos.Location = new System.Drawing.Point(437, 177);
+            this.btnPos.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnPos.Name = "btnPos";
+            this.btnPos.Size = new System.Drawing.Size(198, 109);
+            this.btnPos.TabIndex = 7;
+            this.btnPos.Text = "Position";
+            this.btnPos.UseVisualStyleBackColor = true;
+            this.btnPos.Click += new System.EventHandler(this.button4_Click);
             // 
             // FormTracking
             // 
@@ -135,14 +135,14 @@ namespace PersonnelTrackingApp
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(651, 432);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPos);
+            this.Controls.Add(this.btnDept);
+            this.Controls.Add(this.btnPer);
+            this.Controls.Add(this.btnSal);
             this.Controls.Add(this.btnTasks);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.btnLogout);
-            this.Controls.Add(this.btnTrackEmp);
+            this.Controls.Add(this.btnEmp);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FormTracking";
@@ -155,13 +155,13 @@ namespace PersonnelTrackingApp
 
         #endregion
 
-        private System.Windows.Forms.Button btnTrackEmp;
+        private System.Windows.Forms.Button btnEmp;
         private System.Windows.Forms.Button btnLogout;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnTasks;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnSal;
+        private System.Windows.Forms.Button btnPer;
+        private System.Windows.Forms.Button btnDept;
+        private System.Windows.Forms.Button btnPos;
     }
 }

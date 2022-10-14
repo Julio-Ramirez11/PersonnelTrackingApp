@@ -29,7 +29,6 @@ namespace PersonnelTrackingApp
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.chisAdmin = new System.Windows.Forms.CheckBox();
             this.button2 = new System.Windows.Forms.Button();
             this.txtAddress = new System.Windows.Forms.TextBox();
@@ -56,17 +55,9 @@ namespace PersonnelTrackingApp
             this.btnNewBrowse = new System.Windows.Forms.Button();
             this.btnNewCheck = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Location = new System.Drawing.Point(195, 457);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(148, 26);
-            this.dateTimePicker2.TabIndex = 30;
-            this.dateTimePicker2.ValueChanged += new System.EventHandler(this.dateTimePicker2_ValueChanged);
             // 
             // chisAdmin
             // 
@@ -291,6 +282,7 @@ namespace PersonnelTrackingApp
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(166, 26);
             this.txtPassword.TabIndex = 34;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // btnNewBrowse
             // 
@@ -328,11 +320,20 @@ namespace PersonnelTrackingApp
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(195, 457);
+            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(148, 26);
+            this.dateTimePicker1.TabIndex = 38;
+            // 
             // EmployeeUpdate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(976, 665);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnNewCheck);
             this.Controls.Add(this.btnNewBrowse);
@@ -340,7 +341,6 @@ namespace PersonnelTrackingApp
             this.Controls.Add(this.cmbPosition);
             this.Controls.Add(this.cmbDepartment);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.dateTimePicker2);
             this.Controls.Add(this.chisAdmin);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.txtAddress);
@@ -372,8 +372,6 @@ namespace PersonnelTrackingApp
         }
 
         #endregion
-
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox chisAdmin;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.TextBox txtAddress;
@@ -400,5 +398,6 @@ namespace PersonnelTrackingApp
         private System.Windows.Forms.Button btnNewBrowse;
         private System.Windows.Forms.Button btnNewCheck;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

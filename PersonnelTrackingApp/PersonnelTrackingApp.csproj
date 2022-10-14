@@ -47,12 +47,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddNewEmp.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddNewEmp.Designer.cs">
-      <DependentUpon>AddNewEmp.cs</DependentUpon>
-    </Compile>
     <Compile Include="Employee.cs" />
     <Compile Include="EmployeeForm.cs">
       <SubType>Form</SubType>
@@ -154,9 +148,6 @@
       <DependentUpon>TaskUpdate.cs</DependentUpon>
     </Compile>
     <Compile Include="UserStatic.cs" />
-    <EmbeddedResource Include="AddNewEmp.resx">
-      <DependentUpon>AddNewEmp.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="EmployeeForm.resx">
       <DependentUpon>EmployeeForm.cs</DependentUpon>
     </EmbeddedResource>

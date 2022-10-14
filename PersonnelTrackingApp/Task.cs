@@ -66,7 +66,14 @@ namespace PersonnelTrackingApp
 
         private void btnTaskDel_Click(object sender, EventArgs e)
         {
-
+            DialogResult result = MessageBox.Show("Are you sure to delete this task", "Warning", MessageBoxButtons.YesNo);
+            if(result == DialogResult.Yes)
+            {
+                TaskBLL.DeleteTask(detail.TaskID);
+                MessageBox.Show("Task was Deleted");
+                FillAllData();
+                CleanFilter();
+            }
         }
 
         private void btnTaskNew_Click(object sender, EventArgs e)
